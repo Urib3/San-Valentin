@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hola Catalina Stange, ¿quieres ser mi San Valentín?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffe6f0;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 { color: #e60073; }
+    p { font-size: 20px; }
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #yesBtn {
+      background-color: #28a745;
+      color: white;
+    }
+    #yesBtn:hover {
+      transform: scale(1.3);
+    }
+    #noBtn {
+      background-color: #dc3545;
+      color: white;
+      position: relative;
+    }
+  </style>
+  <script>
+    function moveNoButton() {
+      const noBtn = document.getElementById('noBtn');
+      const x = Math.random() * window.innerWidth * 0.7;
+      const y = Math.random() * window.innerHeight * 0.7;
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    }
+    function showMessage() {
+      document.getElementById('message').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <h1>💖 Hola Catalina Stange, ¿quieres ser mi San Valentín? 💖</h1>
+  <p>📅 Fecha: Cuando nos podamos ver 😊</p>
+  <div class="buttons">
+    <button id="yesBtn" onclick="showMessage()">Sí 💖</button>
+    <button id="noBtn" onclick="moveNoButton()">No 💔</button>
+  </div>
+  <p id="message" style="display:none; font-size:22px; color:#e60073; margin-top:30px;">Gracias por aceptar, te amo un montón 💘</p>
+
+  <!-- Música de fondo -->
+  <audio autoplay loop>
+    <source src="https://www.myinstants.com/media/sounds/devuelveme-ozuna.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+</body>
+</html>
